@@ -1,18 +1,44 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <title>Ejercicio 6. Adivina número secreto</title>
-    </head>
-    <body>
-        <h1>Ejercicio 6. Adivina número secreto</h1>
-        <p>Realice una aplicación que permita averiguar un número secreto entre 0 y 10, permitiendo que el usuario pueda escoger el número de intentos.</p>
-        <b>Intentos: </b><p id="intentos"></p>
-        <script src="js/ejercicio6.js">
-            var intentos=window.prompt('Introduce el número de intentos: ');
-            do{
-                intentos--;
-                document.getElementById("intentos").innerHTML=intentos;
-            }while(intentos>0)
-        </script>
-    </body>
+
+<head>
+    <title>Ejercicio 6. Adivina número secreto</title>
+</head>
+
+<body>
+    <script src="js/ejercicio6.js"></script>
+
+    <h1>Ejercicio 6. Adivina número secreto</h1>
+    <p>Realice una aplicación que permita averiguar un número secreto entre 0 y 10, permitiendo que el usuario pueda
+        escoger el número de intentos.</p>
+    <b>Intentos: </b>
+    <p id="intentos"></p>
+    <p id="txtcorrect"></p>
+    <input type="number" id="numero" />
+    <button type="button" onclick='comprobar()'>comprobar</button>
+    <script>
+        var intentos = window.prompt('Introduce el número de intentos: ');
+        console.log(intentos)
+        var dado = tirarDado();
+        function comprobar() {
+            if(intentos > 0){
+            var numero = Number.parseInt(document.getElementById("numero").value);
+          
+                if(numero == dado){
+                    document.getElementById("txtcorrect").innerHTML = "Correcto";
+                    return
+                }else{
+                    intentos--;
+                    document.getElementById("intentos").innerHTML = intentos;
+                    document.getElementById("txtcorrect").innerHTML = "Incorrecto";
+                    
+
+                }
+            }else{
+                alert("no te quedan intentos")
+            }
+        }
+    </script>
+</body>
+
 </html>

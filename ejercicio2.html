@@ -9,8 +9,15 @@
         <script>
             
             // Solicita edad por teclado
-            // var edad=prompt('¿Cuantos años tienes? '); <-- DESCOMENTA
-
+            var edad=prompt('¿Cuantos años tienes? '); 
+            if(Number(edad)){
+                if(edad < 18){
+                    alert("Usted no tiene edad para conducir");
+                }else{
+                    alert("Usted ya es mayor de edad; por tanto, ya podría conducir");
+                }
+            
+            }
             // Comprobamos que el valor introducido es un numero
             
             // Complete el codigo Javascript

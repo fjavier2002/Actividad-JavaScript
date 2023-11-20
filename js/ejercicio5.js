@@ -8,54 +8,85 @@
  * @returns true | false;
  */
 
-function esMayorEdad(edad)
-{
-    return 0; // Debe escribir el código correcto AQUÍ.
-}
-/**
- * Obtiene la calificación equivalente a la nota numérica
- * @param {int} nota: entero. 
- * @returns  cadena: Calificación
- */
-function obtenerCalificacion(nota)
-{
-    var calificacion="Incorrecta";
+function comprobarEdad(edad) {
+    var edad = Number.parseInt(document.getElementById("edad").value);
+    console.log('Edad: ' + edad);
+    console.log('Mayoría de edad?: ' );
+    var txtEdad = "Usted es menor de edad."
 
-            // Estructura de control *** switch(nota) ***
-            
-            // Complete el codigo AQUÍ
+    if(edad < 18){
+        alert("Usted no tiene edad para conducir");
+        return false
+    }else{
+        alert("Usted ya es mayor de edad; por tanto, ya podría conducir");
+        return true
 
-            return calificacion;
+    }
+
+
 }
-/**
- * Comprueba la mayoria de edad en la página HTML.
- */
-function comprobarEdad()
-{
-    var edad=Number.parseInt(document.getElementById("edad").value);
-    console.log('Edad: '+edad);
-    console.log('Mayoría de edad?: '+esMayorEdad(edad));
-    var txtEdad="Usted es menor de edad."
-    
-    if(esMayorEdad(edad))
-        txtEdad="Usted es mayor de edad."
-    
-    document.getElementById("txtEdad").innerHTML=txtEdad;
-    
+function esMayorEdad(edad){
+
+    if(edad < 18){
+        return false
+    }else{
+        return true
+
+    }
 }
 /**
  * Escribe la calificación asociada a la nota en la página HTML.
  */
-function averiguarCalificacion()
-{
-    var nota=Number.parseInt(document.getElementById("nota").value);
-    console.log('Nota: '+nota);
-    console.log('Calificación: '+obtenerCalificacion(nota));
-        
-    document.getElementById("txtCalificacion").innerHTML="Calificación: "+obtenerCalificacion(nota);
+function obtenerCalificacion(nota) {
+    console.log('Nota: ' + nota);
+
+
+    var calificacion = "";
+    switch (nota) {
+        case 0:
+            return "Muy deficiente"
+            break;
+        case 1:
+            return "Muy deficiente"
+            break;
+        case  2:
+            return "Muy deficiente"
+            break;
+        case 3:
+            return "Insuficiente"
+                break;
+        case 4:
+            return "Insuficiente"
+            break;
+        case 5:
+            return "Suficiente"
+            break;
+        case 6:
+            return "Bien"
+            break;
+        case 7:
+            return "Notable"
+            break;
+        case 8:
+            return "Notable"
+            break;
+        case 9:
+            return "Sobresaliente"
+            break;
+        case 10:
+            return "Sobresaliente"
+            break;
+        default:
+            return"Incorrecta"
+        // code block
+    }
+    alert('Una nota de ' + nota + ' es ' + calificacion);
+    console.log('Una nota de ' + nota + ' es ' + calificacion);
 }
 
-module.exports={
+module.exports = {
     esMayorEdad,
-    obtenerCalificacion,
+    obtenerCalificacion ,
+    
+    comprobarEdad
 };

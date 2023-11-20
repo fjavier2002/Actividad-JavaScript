@@ -8,13 +8,13 @@
         <h2>Comprobar mayoría de edad</h2>
             <p> Introduce tu edad: </p>
             <input type="text" id="edad"/>
-            <button type="button" onclick='comprobarEdad()'>Comprobar Edad</button>
+            <button type="button" onclick='esMayorEdad(Number.parseInt(document.getElementById("edad").value))'>Comprobar Edad</button>
             <p id="txtEdad"></p>
         
         <h2>Cálculo de notas</h2>
             <p> Pide una nota (número). Muestra la calificación según la nota:</p>
             <input type="text" id="nota"/>
-            <button type="button" onclick='averiguarCalificacion()'>Calificación</button>
+            <button type="button" onclick='(obtenerCalificacion(Number.parseInt(document.getElementById("nota").value)))'>Calificación</button>
             <ul>
                 <li>0-3: Muy deficiente.</li>
                 <li>3-5: Insuficiente.</li>

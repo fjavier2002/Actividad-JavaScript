@@ -28,13 +28,10 @@ function menu2()
 {
     // Implemente la opción de la calculadora que permite restar.
     console.info("Resta:");
-    
-    // IMPLEMENTA TU CÓDIGO AQUÍ
-    let minuendo=0;
-    let sustraendo=0;
-    let resultado=-1;
-
-    console.log("El resultado de la resta "+minuendo+" - "+sustraendo+" es "+resultado);
+    let res1=parseInt(prompt("Introduzca el prmier numero para restar: ",0));
+    let res2=parseInt(prompt("Introduzca el segundo numero para restar: ",0));
+    let resultado=res1+res2;
+    console.log("El resultado de la resta "+res1+" - "+res2+" es "+resultado);
     return resultado;
 }
 /**
@@ -44,12 +41,12 @@ function menu2()
  */
 function menu3()
 {
-    // Implemente la opción de la calculadora que permite multiplicar.
-    console.info("Multiplica:");
-    
-    // IMPLEMENTA TU CODIGO AQUÍ 
-
-    return 3;
+    console.info("Multiplicacion:");
+    let mul=parseInt(prompt("Introduzca el prmier numero para multiplicar: ",0));
+    let mul2=parseInt(prompt("Introduzca el segundo numero para multiplicar: ",0));
+    let resultado=mul*mul2;
+    console.log("El resultado de la multiplicacion "+mul+" * "+mul2+" es "+resultado);
+    return resultado;
 }
 
 /**
@@ -59,12 +56,12 @@ function menu3()
  */
 function menu4()
 {
-    // Implemente la opción de la calculadora que permite dividir.
-    console.info("Divide:");
-    
-    // IMPLEMENTA TU CÓDIGO AQUÍ
-
-    return 4;
+    console.info("Dividir:");
+    let dividendo=parseInt(prompt("Introduzca el prmier dividendo: ",0));
+    let divisor=parseInt(prompt("Introduzca el segundo divisor: ",0));
+    let resultado=dividendo/divisor;
+    console.log("El resultado de la division "+dividendo+" / "+divisor+" es "+resultado);
+    return resultado;
 
 }
 

@@ -8,9 +8,16 @@ function fibonacci(n)
 {
     let vector=new Array(); // Creamos un vector para alamcenar el cálculo
     
-    
     // ESCRIBE TU CÓDIGO AQUÍ
-    
+    if (n == 1) vector.push(1);
+    if (n >= 2){
+        vector.push(1);
+        vector.push(1);
+        
+    }
+    for (let i = 2; i < n; i++) {
+        vector.push(vector[i - 1] + vector[i - 2]);
+    }
     
     return vector; // Retorno de la función
 }
